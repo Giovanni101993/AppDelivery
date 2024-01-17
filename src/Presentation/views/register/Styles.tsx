@@ -10,7 +10,7 @@ const RegisterStyles = StyleSheet.create({
         width: '100%',
         height: '100%',
         opacity: 0.3,
-        bottom: '41%'
+        bottom: '43%'
     },
 
     logoContainer: {
@@ -20,12 +20,12 @@ const RegisterStyles = StyleSheet.create({
         alignItems: 'center'
     },
     logoImage:{
-        width: 100,
-        height: 100
+        width: 80,
+        height: 80
     },
     logoText:{
         color: 'white',
-        fontSize: 25,
+        fontSize: 20,
         textAlign: 'center',
         fontWeight: 'bold',
         paddingTop: 10
@@ -33,13 +33,13 @@ const RegisterStyles = StyleSheet.create({
 
     form: {
         width: '100%',
-        height: '72%',
+        height: '74%',
         backgroundColor: MyColors.background,
         position: 'absolute',
         bottom: 0,
         borderTopLeftRadius: 40,
         borderTopRightRadius: 40,
-        padding: 30
+        padding: 25
     },
     formText:{
         fontWeight: 'bold',
