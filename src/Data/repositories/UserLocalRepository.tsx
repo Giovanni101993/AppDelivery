@@ -15,4 +15,9 @@ export class UserLocalRepositoryImpl implements UserLocalRepository{
         const user: User =JSON.parse(data as any);
         return user;
     }
+
+    async remove(): Promise<void> {
+        const {remove} = LocalStorage();
+        await remove('user');
+    }
 }

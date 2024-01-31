@@ -3,6 +3,6 @@ import { User } from "../../entities/User";
 
 const {save} = new UserLocalRepositoryImpl();
 
-export const SaveUserUseCase = async (user: User) => {
+export const SaveUserLocalUseCase = async (user: User) => {
     return await save(user);
 }

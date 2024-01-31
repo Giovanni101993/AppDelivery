@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { LoginAuthUseCase } from '../../../Domain/useCases/auth/LoginAuth';
-import { SaveUserUseCase } from '../../../Domain/useCases/userLocal/SaveUser';
-import { GetUserUseCase } from '../../../Domain/useCases/userLocal/GetUser';
+import { SaveUserLocalUseCase } from '../../../Domain/useCases/userLocal/SaveUserLocal';
+import { GetUserLocalUseCase } from '../../../Domain/useCases/userLocal/GetUserLocal';
 import { useUserLocal } from '../../hooks/useUserLocal';
+import { UserContext } from '../../context/UserContext';
 
 const HomeViewModel = () => {
 
@@ -13,7 +14,10 @@ const HomeViewModel = () => {
         password: '',
     });
 
-    const {user} = useUserLocal();
+    //const {user, getUserSession} = useUserLocal();
+
+    const {user, saveUserSession} = useContext (UserContext);
+
     console.log('USUARIO DE SESION: ' + JSON.stringify(user));
     
     const onChange=(property: string, value: any) => {
@@ -29,7 +33,7 @@ const HomeViewModel = () => {
                 setErrorMessage(response.message); 
             }
             else{
-                await SaveUserUseCase(response.data);
+               saveUserSession(response.data);
             }
         }
         
