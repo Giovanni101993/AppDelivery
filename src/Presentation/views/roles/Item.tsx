@@ -3,7 +3,7 @@ import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react-native'
 import {Rol} from '../../../Domain/entities/Rol';
 import { MyColors } from '../../theme/AppTheme';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../../../App';
+import { RootStackParamList } from '../../navigator/MainStackNavigator';
 
 interface Props {
     rol: Rol,

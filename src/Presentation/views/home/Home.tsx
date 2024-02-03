@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, TextInput, ToastAndroid, TouchableOpacity, Vie
 import { RoundedButton } from '../../../Presentation/components/RoundedButton';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp, StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../../../../App';
+import { RootStackParamList } from '../../navigator/MainStackNavigator';
 import UseViewModel from './ViewModel';
 import { CustomTextInput } from '../../components/CustomTextInput';
 import styles from './Styles';

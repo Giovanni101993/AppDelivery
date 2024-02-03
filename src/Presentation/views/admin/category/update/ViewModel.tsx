@@ -1,32 +1,35 @@
 import React, {useContext, useState} from 'react'
 import * as ImagePicker from 'expo-image-picker';
-import { CreateCategoryUseCase } from '../../../../../Domain/useCases/category/CreateCategory';
+import { UpdateCategoryUseCase } from '../../../../../Domain/useCases/category/UpdateCategory';
+import { UpdateWithImageCategoryUseCase } from '../../../../../Domain/useCases/category/UpdateWithImageCategory';
+import { Category } from '../../../../../Domain/entities/Category';
+import { ResponseAPIDelivery } from '../../../../../Data/sources/remote/models/ResponseApiDelivery';
 import { CategoryContext } from '../../../../context/CategoryContext';
 
-const AdminCategoryCreateViewModel = () => {
+const AdminCategoryUpdateViewModel = (category: Category) => {
 
-    
     const [responseMessage, setResponseMessage ] = useState('');
     const [loading, setLoading] = useState(false);
     const [file, setFile] = useState<ImagePicker.ImagePickerAsset>();
-    const {create} = useContext(CategoryContext)
+    const {update, updateWithImage} = useContext(CategoryContext); 
 
-    const [values, setValues] = useState({
-        name: '',
-        description: '',
-        image: ''
-    });
+    const [values, setValues] = useState(category);
 
     const onChange=(property: string, value: any) => {
         setValues({...values, [property]: value});
     }
 
-    const createCategory = async () => {
+    const updateCategory = async () => {
         setLoading(true);
-        const response = await create(values, file!);
+        let response = {} as ResponseAPIDelivery;
+        if(values.image?.includes('https://')){
+            response = await update(values);
+        }
+        else{
+            response = await updateWithImage(values, file!);
+        }
         setLoading(false);
         setResponseMessage(response.message);
-        resetForm();
     }
 
     const pickImage = async () => {
@@ -55,24 +58,17 @@ const AdminCategoryCreateViewModel = () => {
         }
     }
 
-    const resetForm = async () =>{
-        setValues({
-                name: '',
-            description: '',
-            image: ''
-        }
-        )
-    }
+   
   
     return{
         ...values,
         onChange,
         takePhoto,
         pickImage,
+        updateCategory,
         loading,
         responseMessage,
-        createCategory
     }
 }
 
-export default AdminCategoryCreateViewModel;
+export default AdminCategoryUpdateViewModel;
