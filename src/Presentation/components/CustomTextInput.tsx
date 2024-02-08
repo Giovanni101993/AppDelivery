@@ -30,7 +30,7 @@ export const CustomTextInput = ({
                 style={styles.formTextInput}
                 placeholder= {placeholder }
                 keyboardType= {keyBoardtype }
-                value={value}
+                value={value} 
                 onChangeText={text => onChangeText(property  , text)}
                 secureTextEntry={secureTextEntry }
             />
