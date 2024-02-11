@@ -120,7 +120,7 @@ export const AdminProductCreateScreen = ({navigation, route}: Props) => {
                 image = {require('../../../../../../assets/price.png')}
                 keyBoardtype='numeric'
                 property='price'
-                value = {price}
+                value = {`${price}`}
                 onChangeText={onChange}
             />
 
