@@ -10,36 +10,39 @@ const ProfileUpdateStyles = StyleSheet.create({
         width: '100%',
         height: '100%',
         opacity: 0.3,
-        bottom: '38%'
+        bottom: '34%'
     },
 
     logoContainer: {
         position: 'absolute',
         alignSelf: 'center',
         top: '2%',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     logoImage:{
-        width: 90,
-        height: 90
+        width: 110,
+        height: 110,
+        borderRadius:100,
+        borderColor: 'white',
+        borderWidth: 2
     },
     logoText:{
         color: 'white',
-        fontSize: 20,
+        fontSize: 16,
         textAlign: 'center',
         fontWeight: 'bold',
-        paddingTop: 10
+        paddingTop: 15
     },
 
     form: {
         width: '100%',
-        height: '68%',
+        height: '65%',
         backgroundColor: MyColors.background,
         position: 'absolute',
         bottom: 0,
         borderTopLeftRadius: 40,
         borderTopRightRadius: 40,
-        padding: 25
+        padding: 20
     },
     formText:{
         fontWeight: 'bold',
@@ -53,7 +56,6 @@ const ProfileUpdateStyles = StyleSheet.create({
     },
     formInput:{
         flexDirection: 'row',
-        marginTop: 25
     },
     formInputImage:{
         width: 30,

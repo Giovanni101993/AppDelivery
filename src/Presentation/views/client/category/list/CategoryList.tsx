@@ -26,7 +26,7 @@ useEffect(() => {
   <GestureHandlerRootView style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white'}}>
     <View>
               <Carousel
-                loop={false}
+                loop={true}
                 width={width}
                 height={height/1.8}
                 autoPlay={false}

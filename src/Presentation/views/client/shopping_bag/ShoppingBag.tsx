@@ -4,8 +4,13 @@ import useViewModel from './ViewModel';
 import { ShoppingBagItem } from './Item';
 import { RoundedButton } from '../../../components/RoundedButton';
 import styles from './Styles';
+import { StackScreenProps } from '@react-navigation/stack';
+import { ClientStackParamList } from '../../../navigator/ClientStackNavigator';
 
-export const ClientShoppingBagScreen = () => {
+
+interface Props extends StackScreenProps <ClientStackParamList, 'ClientShoppingBagScreen'>{};
+
+export const ClientShoppingBagScreen = ({navigation, route}: Props) => {
 
   const {shoppingBag, total, addItem, subtractItem, deleteItem} = useViewModel();
   return (
@@ -33,7 +38,7 @@ export const ClientShoppingBagScreen = () => {
             <RoundedButton
               
               text='CONFIRMAR COMPRA'
-              onPress={() => {}}
+              onPress={() => navigation.navigate('ClientAddressListScreen')}
             />
           </View>
 

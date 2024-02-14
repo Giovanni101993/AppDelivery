@@ -60,7 +60,7 @@ export const RegisterScreen = ({navigation, route}: Props) => {
     <View style={styles.form}>
 
       <ScrollView>
-        <Text style={styles.formText}>REGISTRARSE</Text>
+        
 
         <CustomTextInput
           placeholder='Nombres'

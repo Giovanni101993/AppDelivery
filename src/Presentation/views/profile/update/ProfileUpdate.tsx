@@ -62,7 +62,7 @@ export const ProfileUpdateScreen = ({navigation, route}: Props) => {
     <View style={styles.form}>
 
       <ScrollView>
-        <Text style={styles.formText}>ACTUALIZAR INFORMACIÓN</Text>
+        
 
         <CustomTextInput
           placeholder='Nombres'
@@ -111,7 +111,7 @@ export const ProfileUpdateScreen = ({navigation, route}: Props) => {
           secureTextEntry={true}
         /> 
 
-        <View style={{marginTop: 30}}>
+        <View style={{marginTop: 34}}>
             <RoundedButton text='REGISTRAR' onPress={ () => {update();}}/>
         </View>
       </ScrollView>

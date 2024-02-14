@@ -27,7 +27,7 @@ export const RolesScreen = ({navigation, route}: Props) => {
         />*/}
 
               <Carousel
-                loop={false}
+                loop={true}
                 width={width}
                 height={height / 2}
                 autoPlay={false}

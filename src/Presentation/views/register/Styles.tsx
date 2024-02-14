@@ -39,7 +39,7 @@ const RegisterStyles = StyleSheet.create({
         bottom: 0,
         borderTopLeftRadius: 40,
         borderTopRightRadius: 40,
-        padding: 25
+        padding: 20
     },
     formText:{
         fontWeight: 'bold',

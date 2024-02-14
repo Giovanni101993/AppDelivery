@@ -33,7 +33,18 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.giovanni101993.envioYa"
+      "package": "com.giovanni101993.envioYa",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBEWKdX6buPuub1Sur4f3DhMPg1D5Sm9OA"
+        }
+      },
+      "permissions": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "FOREGROUND_SERVICE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"

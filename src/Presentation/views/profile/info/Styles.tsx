@@ -12,18 +12,15 @@ const ProfileInfoStyles = StyleSheet.create({
         position: 'absolute',
         alignSelf: 'center',
         top: '15%',
-        width: 176,
-        height: 176,
-        borderRadius: 100,
-        backgroundColor: 'white'
     },
     logoImage:{
-        
         alignSelf: 'center',
         top:3,
         width: 170,
         height: 170,
-        borderRadius: 100
+        borderRadius: 100,
+        borderColor: 'white',
+        borderWidth: 3
     },
     logoText:{
         color: 'white',
@@ -35,7 +32,7 @@ const ProfileInfoStyles = StyleSheet.create({
         width: '100%',
         height: '100%',
         opacity: 0.7,
-        bottom: '15%'
+        bottom: '14%'
     },
     form: {
         width: '100%',

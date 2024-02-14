@@ -10,7 +10,7 @@ const HomeStyles = StyleSheet.create({
         width: '100%',
         height: '100%',
         opacity: 0.3,
-        bottom: '10%'
+        bottom: '15%'
     },
 
     logoContainer: {
@@ -31,7 +31,7 @@ const HomeStyles = StyleSheet.create({
 
     form: {
         width: '100%',
-        height: '40%',
+        height: '45%',
         backgroundColor: MyColors.background,
         position: 'absolute',
         bottom: 0,
@@ -61,7 +61,7 @@ const HomeStyles = StyleSheet.create({
     formRegister:{
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: 20
+        marginTop: 30
     },
     formRegisterText:{
         fontStyle:'italic',

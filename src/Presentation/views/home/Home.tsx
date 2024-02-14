@@ -69,7 +69,7 @@ return (
             secureTextEntry={true}
         />
 
-        <View style={{marginTop: 30}}>
+        <View style={{marginTop: 40}}>
             <RoundedButton text='ENTRAR' onPress={ () => login()}/>
         </View>
 

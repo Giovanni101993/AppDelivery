@@ -8,6 +8,7 @@ interface Props{
     keyBoardtype: KeyboardType,
     secureTextEntry?: boolean,
     property: string,
+    editable?: boolean,
     onChangeText: (property: string, value: any)=> void
 }
 
@@ -18,6 +19,7 @@ export const CustomTextInput = ({
     keyBoardtype,
     secureTextEntry = false,
     property,
+    editable = true,
     onChangeText 
 }: Props) => {
   return (
@@ -33,6 +35,7 @@ export const CustomTextInput = ({
                 value={value} 
                 onChangeText={text => onChangeText(property  , text)}
                 secureTextEntry={secureTextEntry }
+                editable= {editable}
             />
         </View>
   )

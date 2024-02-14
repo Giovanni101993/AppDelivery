@@ -1,3 +1,4 @@
+import { Address } from "./Address";
 import { Rol } from "./Rol";
 
 export interface User {
@@ -11,4 +12,5 @@ export interface User {
     image?:          string;
     session_token?:  string;
     roles?:          Rol[];
+    address?:        Address;
 }

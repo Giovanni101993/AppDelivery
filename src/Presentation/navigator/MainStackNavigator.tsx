@@ -37,7 +37,7 @@ export const MainStackNavigator = () => {
           component={RegisterScreen}
           options={{
             headerShown: true,
-            title: 'Registro de nuevos usuarios'
+            title: 'Registrate'
         }}/>
       
         <Stack.Screen name="RolesScreen" 
