@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Product } from '../../../../../Domain/entities/Product';
 import { ShoppingBagContext } from '../../../../context/ShoppingBagContext';
+import { ToastAndroid } from 'react-native';
 
 export const ClientProductDetailViewModel = (product: Product) => {
 
@@ -30,6 +31,7 @@ export const ClientProductDetailViewModel = (product: Product) => {
       if(quantity > 0){
         product.quantity = quantity;
         saveItem(product);
+        ToastAndroid.show(product.name + ' se agrego', ToastAndroid.SHORT);
       }
     }
     

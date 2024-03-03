@@ -42,7 +42,7 @@ export const ClientAddressCreateScreen = ({navigation, route}: Props) => {
         <View style = {styles.form}>
             <ScrollView>
             <CustomTextInput
-                placeholder='Nombre de la ubicación'
+                placeholder='Dirección'
                 image = {require('../../../../../../assets/house.png')}
                 keyBoardtype='default'
                 property='address'

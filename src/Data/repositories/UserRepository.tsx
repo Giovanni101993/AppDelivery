@@ -8,6 +8,16 @@ import mime from "mime";
 
 export class UserRepositoryImpl implements UserRepository{
 
+    async getDeliveryMen(): Promise<User[]> {
+        try {
+          const response = await ApiDelivery.get<User[]>('/users/findDeliveryMen');
+          return Promise.resolve(response.data);
+        } catch (error) {
+            let e = (error as AxiosError);
+            return Promise.resolve([]);
+        }
+    }
+
     async update(user: User): Promise<ResponseAPIDelivery> {                
         try{
             const response = await ApiDelivery.put<ResponseAPIDelivery>('/users/updateWithoutImage', user);

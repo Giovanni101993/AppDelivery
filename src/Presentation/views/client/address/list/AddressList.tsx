@@ -1,11 +1,20 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, ToastAndroid, View } from 'react-native'
 import useViewModel from './ViewModel';
 import { AddressListItem } from './Item';
+import { useEffect } from 'react';
+import { RoundedButton } from '../../../../components/RoundedButton';
 
 export const ClientAddressListScreen = () => {
 
-  const {address, checked, changeRadioValue} = useViewModel();
+  const {address, checked, responseMessagge, changeRadioValue, createOrder} = useViewModel();
   
+  useEffect(() => {
+    if(responseMessagge !== ''){
+      ToastAndroid.show(responseMessagge, ToastAndroid.LONG);
+    }
+  }, [responseMessagge])
+  
+
   return (
     <View style={{flex: 1, backgroundColor:'white'}}>
       <View style={styles.title}>
@@ -20,8 +29,12 @@ export const ClientAddressListScreen = () => {
             checked={checked}
             changeRadioValue={changeRadioValue}
           />
+
         }
       />
+          <View style={styles.buttonAddress}>
+            <RoundedButton  onPress = {() => createOrder()} text='CONTINUAR'/>
+          </View>
     </View>
   )
 }
@@ -35,5 +48,10 @@ const styles = StyleSheet.create({
   textTitle:{
       fontSize: 20,
       fontWeight: 'bold'
+  },
+  buttonAddress:{
+    width:'100%',
+    paddingHorizontal: 20,
+    paddingVertical: 20
   }
 })

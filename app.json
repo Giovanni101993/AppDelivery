@@ -36,7 +36,7 @@
       "package": "com.giovanni101993.envioYa",
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyBEWKdX6buPuub1Sur4f3DhMPg1D5Sm9OA"
+          "apiKey": "" 
         }
       },
       "permissions": [
@@ -51,7 +51,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "473bdbac-e5ca-4fcc-9827-72f55942b8be"
+        "projectId": ""
       }
     }
   }
