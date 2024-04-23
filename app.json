@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "domii",
+    "slug": "domii",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/domii3.png",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "custom photos permission",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to open the camera",
+          "//": "Disables the microphone permission",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./local/assets/notification-icon.png",
+          "color": "#ffffff",
+          "sounds": [
+            "./local/assets/notification-sound.wav",
+            "./local/assets/notification-sound-other.wav"
+          ]
+        }
+      ]
+    ],
+    "splash": {
+      "image": "./assets/domiiBig.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/domii3.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.giovanni101993.envioYa",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCCIfcR2K6sdVbUlONEaGHI8xzkjSM7btQ" 
+        }
+      },
+      "permissions": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "FOREGROUND_SERVICE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "473bdbac-e5ca-4fcc-9827-72f55942b8be"
+      }
+    }
+  }
+}
